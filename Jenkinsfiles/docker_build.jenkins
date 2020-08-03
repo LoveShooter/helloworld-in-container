@@ -23,7 +23,7 @@ pipeline {
         stage("create docker image") {
             steps {
                 echo " ============== start building image =================="
-                dir ('Dockerfile') {
+                dir ('app') {
                     sh 'docker build -t loveshooter/hellowrld:latest . '
                 }
             }
